@@ -1,0 +1,9 @@
+language: cpp
+compiler:
+  - gcc
+script:
+  - sudo apt-get install libboost-test-dev
+  - cd linklist
+  - make clean test
+  - cd ../arraylist
+  - make clean test
