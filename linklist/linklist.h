@@ -17,6 +17,7 @@ private:
 
 public:
 	Linklist();
+	~Linklist();
 	bool isEmpty() const;
 	int operator[](int position);
 	void insert(int value, int position);

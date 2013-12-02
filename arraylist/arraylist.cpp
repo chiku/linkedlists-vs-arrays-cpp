@@ -14,6 +14,11 @@ Arraylist::Arraylist(int capacity_)
 	}
 }
 
+Arraylist::~Arraylist()
+{
+	delete[] values;
+}
+
 bool
 Arraylist::isEmpty() const
 {

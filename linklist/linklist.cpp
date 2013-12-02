@@ -20,6 +20,16 @@ Linklist::Linklist()
 	head = NULL;
 }
 
+Linklist::~Linklist() {
+	Node *p;
+
+	while (head != NULL) {
+		p = head->next;
+		delete head;
+		head = p;
+	}
+}
+
 bool
 Linklist::isEmpty() const
 {

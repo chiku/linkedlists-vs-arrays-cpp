@@ -10,6 +10,7 @@ private:
 
 public:
 	Arraylist(int capacity);
+	~Arraylist();
 	bool isEmpty() const;
 	int operator[](int position);
 	void insert(int value, int position);
