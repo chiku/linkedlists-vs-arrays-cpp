@@ -5,8 +5,8 @@ STRIP = strip
 LCOV = lcov
 GENHTML = genhtml
 
-CFLAGS += -O2
-CXXFLAGS += -O2
+CFLAGS += -O2 -Wall -Wextra
+CXXFLAGS += -O2 -Wall -Wextra
 LDFLAGS += -lboost_unit_test_framework
 
 CXXFLAGS += -I.
@@ -30,12 +30,12 @@ coverage: LDFLAGS += --coverage
 coverage: test generate.coverage.report
 
 generate.coverage.report:
-	${LCOV} --capture --directory linklist --output-file coverage.info
-	${LCOV} --extract coverage.info "${PWD}/linklist.cpp" -o coverage.filtered.info
+	${LCOV} --capture --directory . --output-file coverage.info
+	${LCOV} --extract coverage.info "linklist.cpp" -o coverage.filtered.info
 	${GENHTML} coverage.filtered.info --output-directory coverage
 
 clean:
-	rm -rf *.o bin/linklist-test bin/linklist *.info *.gcda *.gcno coverage*
+	rm -rf obj/*.o bin/linklist* *.info *.gcda *.gcno coverage*
 
 bin/linklist: obj/linklist.o obj/main.o
 	${CXX} -o bin/linklist obj/linklist.o obj/main.o ${LDFLAGS}

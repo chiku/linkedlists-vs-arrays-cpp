@@ -5,12 +5,22 @@ struct Node
 {
 	int value;
 	Node *next;
+
+	Node();
+	Node(int value_, Node *next_);
 };
 
 class Linklist
 {
+private:
+	Node *head;
+
 public:
-	bool isEmpty() const;	
+	Linklist();
+	bool isEmpty() const;
+	int operator[](int position);
+	void insert(int value, int position);
+	void dump() const;
 };
 
 #endif
