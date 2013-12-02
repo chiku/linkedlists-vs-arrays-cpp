@@ -32,7 +32,7 @@ Linklist::operator[](int position)
 	Node *p;
 	int i;
 
-	for (i = 0, p = head; i < position && p != NULL; i++, p = p->next);
+	for (i = 0, p = head; i < position && p != NULL; i++, p = p->next) ;
 
 	return p != NULL ? p->value : 0;
 }
@@ -40,15 +40,10 @@ Linklist::operator[](int position)
 void
 Linklist::insert(int value, int position)
 {
-	Node *p = head;
+	Node *p;
 	int i;
 
-	if (isEmpty()) {
-		head = new Node(value, NULL);
-		return;
-	}
-
-	if (position == 0) {
+	if (isEmpty() || position == 0) {
 		head = new Node(value, head);
 		return;
 	}
