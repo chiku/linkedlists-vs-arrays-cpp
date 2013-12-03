@@ -25,8 +25,6 @@ Axlsx::Package.new(:author => "Chirantan") do |p|
       chart.end_at 14, 25
       chart.add_series :xData => sheet["A2:A#{1+size}"], :yData => sheet["B2:B#{1+size}"], :title => "Array", :color => "FF0000"
       chart.add_series :xData => sheet["A2:A#{1+size}"], :yData => sheet["C2:C#{1+size}"], :title => "Linked-list", :color => "00FF00"
-
-      puts chart.scatter_style
     end
   end
 
