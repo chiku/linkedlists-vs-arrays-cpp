@@ -7,14 +7,14 @@ CSV.foreach("outputs/arraylist.csv") do |(sample_size, time)|
   sample_to_times[sample_size.to_f] = [time.to_f]
 end
 
-CSV.foreach("outputs/linklist.csv") do |(sample_size, time)|
+CSV.foreach("outputs/linkedlist.csv") do |(sample_size, time)|
   sample_to_times[sample_size.to_f] << time.to_f
 end
 
 size = sample_to_times.size
 
 Axlsx::Package.new(:author => "Chirantan") do |p|
-  p.workbook.add_worksheet(:name => "Arrays vs Link-list") do |sheet|    
+  p.workbook.add_worksheet(:name => "Arrays vs Linked-list") do |sheet|
     sheet.add_row ["List size", "Array (ms)", "Linked-list (ms)"]
     sample_to_times.each do |size, (array, linked_list)|
       sheet.add_row [size, array, linked_list]
@@ -25,7 +25,7 @@ Axlsx::Package.new(:author => "Chirantan") do |p|
       chart.end_at 14, 25
       chart.add_series :xData => sheet["A2:A#{1+size}"], :yData => sheet["B2:B#{1+size}"], :title => "Array", :color => "FF0000"
       chart.add_series :xData => sheet["A2:A#{1+size}"], :yData => sheet["C2:C#{1+size}"], :title => "Linked-list", :color => "00FF00"
-      
+
       puts chart.scatter_style
     end
   end

@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 
-#include "linklist.h"
+#include "linkedlist.h"
 
 int main()
 {
@@ -14,7 +14,7 @@ int main()
 		sumOfTimes = 0.0;
 
 		for (int iterations = 0; iterations < REPEATS; iterations++) {
-			Linklist list;
+			Linkedlist list;
 			std::clock_t start = std::clock();
 
 			for (int i = 0; i < insertions; i++) {

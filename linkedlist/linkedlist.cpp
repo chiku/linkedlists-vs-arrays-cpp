@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstddef>
 
-#include "linklist.h"
+#include "linkedlist.h"
 
 Node::Node()
 {
@@ -15,12 +15,12 @@ Node::Node(int value_, Node *next_)
 	next = next_;
 }
 
-Linklist::Linklist()
+Linkedlist::Linkedlist()
 {
 	head = NULL;
 }
 
-Linklist::~Linklist() {
+Linkedlist::~Linkedlist() {
 	Node *p;
 
 	while (head != NULL) {
@@ -31,13 +31,13 @@ Linklist::~Linklist() {
 }
 
 bool
-Linklist::isEmpty() const
+Linkedlist::isEmpty() const
 {
 	return head == NULL;
 }
 
 int
-Linklist::operator[](int position)
+Linkedlist::operator[](int position)
 {
 	Node *p;
 	int i;
@@ -48,7 +48,7 @@ Linklist::operator[](int position)
 }
 
 void
-Linklist::insert(int value, int position)
+Linkedlist::insert(int value, int position)
 {
 	Node *p;
 	int i;
@@ -64,7 +64,7 @@ Linklist::insert(int value, int position)
 }
 
 void
-Linklist::dump() const
+Linkedlist::dump() const
 {
 	std::cout << std::endl << "dump: [";
 

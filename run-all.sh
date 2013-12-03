@@ -7,9 +7,9 @@ make clean compile test
 ./bin/arraylist | tee ../outputs/arraylist.csv
 cd ..
 
-cd linklist
+cd linkedlist
 make clean compile test
-./bin/linklist | tee ../outputs/linklist.csv
+./bin/linkedlist | tee ../outputs/linkedlist.csv
 cd ..
 
 ruby generate_chart_report.rb

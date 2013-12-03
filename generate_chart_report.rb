@@ -10,7 +10,7 @@ CSV.foreach("outputs/arraylist.csv") do |(sample_size, time)|
   arrays <<  time.to_f
 end
 
-CSV.foreach("outputs/linklist.csv") do |(sample_size, time)|
+CSV.foreach("outputs/linkedlist.csv") do |(sample_size, time)|
   linked_lists << time.to_f
 end
 

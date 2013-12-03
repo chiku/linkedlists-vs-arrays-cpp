@@ -10,14 +10,14 @@ struct Node
 	Node(int value_, Node *next_);
 };
 
-class Linklist
+class Linkedlist
 {
 private:
 	Node *head;
 
 public:
-	Linklist();
-	~Linklist();
+	Linkedlist();
+	~Linkedlist();
 	bool isEmpty() const;
 	int operator[](int position);
 	void insert(int value, int position);
