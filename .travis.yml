@@ -4,6 +4,6 @@ compiler:
 script:
   - sudo apt-get install libboost-test-dev
   - cd linkedlist
-  - make clean test
+  - make clean coverage
   - cd ../arraylist
-  - make clean test
+  - make clean coverage
