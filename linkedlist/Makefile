@@ -30,7 +30,7 @@ coverage: LDFLAGS += --coverage
 coverage: test generate.coverage.report
 
 generate.coverage.report:
-	${LCOV} --capture --directory . --output-file coverage.info
+	${LCOV} --capture --directory bin --output-file coverage.info
 	${LCOV} --extract coverage.info "linkedlist.cpp" -o coverage.filtered.info
 	${GENHTML} coverage.filtered.info --output-directory coverage
 
