@@ -9,6 +9,10 @@ Prerequisites
 * Bundler gem
 * make
 * A C++ compiler
+* Boost test library
+
+You can boost test library on Ubuntu using ```sudo apt-get install libboost-test-dev```
+
 
 How to run the benchmarks
 -------------------------
@@ -29,6 +33,11 @@ bundle
 ```
 ./run-all.sh
 ```
+
+Result
+------
+
+You can view the results by opening *public/index.html* in a web-browser. You can also open *result.xlsx* in a spreadsheet application.
 
 License
 -------
