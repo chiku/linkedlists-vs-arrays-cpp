@@ -1,0 +1,48 @@
+$(function() {
+    $('#container').highcharts({
+        chart: {
+            type: 'line',
+            height: 800,
+            width: 1200
+        },
+        title: {
+            text: 'Average time to insert data'
+        },
+        subtitle: {
+            text: '<a href="https://github.com/chiku/linklists-vs-arrays">https://github.com/chiku/linklists-vs-arrays</a>'
+        },
+        xAxis: {
+            categories: [<%= container_sizes %>],
+            title: {
+                text: 'Size'
+            },
+            tickInterval: 5
+        },
+        yAxis: {
+            title: {
+                text: 'Time (ms)'
+            },
+            min: 0
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: false
+                },
+                marker: {
+                    enabled: false
+                },
+                enableMouseTracking: false
+            }
+        },
+        series: [{
+            name: 'Array',
+            data: [ <%= array_durations %> ],
+            animation: false
+        }, {
+            name: 'Linked-list',
+            data: [ <%= linked_list_durations %> ],
+            animation: false
+        }]
+    });
+});
