@@ -6,8 +6,8 @@
 Arraylist::Arraylist(int capacity_)
 {
 	capacity = capacity_;
+	tail = -1;
 	values = new int[capacity];
-	empty = true;
 
 	for (int i = 0; i < capacity; i++) {
 		values[i] = 0;
@@ -22,7 +22,7 @@ Arraylist::~Arraylist()
 bool
 Arraylist::isEmpty() const
 {
-	return empty;
+	return tail == -1;
 }
 
 int
@@ -34,7 +34,8 @@ Arraylist::operator[](int position)
 void
 Arraylist::insert(int value, int position)
 {
-	empty = false;
+	tail++;
+	position = position > tail ? tail : position;
 
 	for (int i = capacity - 1; i > position - 1; i--) {
 		values[i + 1] = values[i];

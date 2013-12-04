@@ -3,7 +3,7 @@
 
 #include "linkedlist.h"
 
-Node::Node(int value_, Node *next_)
+Linkedlist::Node::Node(int value_, Node *next_)
 {
 	value = value_;
 	next = next_;
@@ -15,7 +15,7 @@ Linkedlist::Linkedlist()
 }
 
 Linkedlist::~Linkedlist() {
-	Node *p;
+	Linkedlist::Node *p;
 
 	while (head != NULL) {
 		p = head->next;
@@ -33,7 +33,7 @@ Linkedlist::isEmpty() const
 int
 Linkedlist::operator[](int position)
 {
-	Node *p;
+	Linkedlist::Node *p;
 	int i;
 
 	for (i = 0, p = head; i < position && p != NULL; i++, p = p->next) ;
@@ -44,17 +44,17 @@ Linkedlist::operator[](int position)
 void
 Linkedlist::insert(int value, int position)
 {
-	Node *p;
+	Linkedlist::Node *p;
 	int i;
 
 	if (isEmpty() || position == 0) {
-		head = new Node(value, head);
+		head = new Linkedlist::Node(value, head);
 		return;
 	}
 
 	for (i = 0, p = head; i < position-1 && p->next != NULL; i++, p = p->next) ;
 
-	p->next = new Node(value, p->next);
+	p->next = new Linkedlist::Node(value, p->next);
 }
 
 std::string
@@ -63,7 +63,7 @@ Linkedlist::dump() const
 	std::ostringstream s;
 	s << "[ ";
 
-	for (Node *p = head; p != NULL; p = p->next) {
+	for (Linkedlist::Node *p = head; p != NULL; p = p->next) {
 		s << '<' << p->value << '>' << " -> ";
 	}
 

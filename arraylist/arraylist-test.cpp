@@ -49,6 +49,17 @@ BOOST_AUTO_TEST_CASE(array_list_has_items_when_second_item_is_inserted_at_end)
 	BOOST_CHECK_EQUAL(20, list[1]);
 }
 
+BOOST_AUTO_TEST_CASE(array_list_has_items_when_item_is_inserted_beyond_end)
+{
+	Arraylist list(3);
+	list.insert(10, 0);
+	list.insert(20, 2);
+
+	BOOST_CHECK_EQUAL(false, list.isEmpty());
+	BOOST_CHECK_EQUAL(10, list[0]);
+	BOOST_CHECK_EQUAL(20, list[1]);
+}
+
 BOOST_AUTO_TEST_CASE(array_list_has_items_when_second_item_is_inserted_at_start)
 {
 	Arraylist list(3);

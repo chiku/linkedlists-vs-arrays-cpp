@@ -5,8 +5,8 @@ class Arraylist
 {
 private:
 	int capacity;
+	int tail;
 	int *values;
-	bool empty;
 
 public:
 	Arraylist(int capacity);

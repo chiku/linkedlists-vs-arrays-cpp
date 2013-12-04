@@ -1,17 +1,16 @@
 #ifndef __LINKED_LIST_H__
 #define __LINKED_LIST_H__
 
-struct Node
-{
-	int value;
-	Node *next;
-
-	Node();
-	Node(int value_, Node *next_);
-};
-
 class Linkedlist
 {
+	struct Node
+	{
+		int value;
+		Node *next;
+
+		Node(int value_, Node *next_);
+	};
+
 private:
 	Node *head;
 
