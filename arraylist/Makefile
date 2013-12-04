@@ -1,9 +1,9 @@
-CC = gcc
-CXX = g++
-AR = ar
-STRIP = strip
-LCOV = lcov
-GENHTML = genhtml
+CC := gcc
+CXX := g++
+AR := ar
+STRIP := strip
+LCOV := lcov
+GENHTML := genhtml
 
 CFLAGS += -O2 -Wall -Wextra
 CXXFLAGS += -O2 -Wall -Wextra
@@ -12,7 +12,7 @@ LDFLAGS += -lboost_unit_test_framework
 CXXFLAGS += -I.
 
 obj/%.o: %.cpp
-	$(CXX) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+	$(CXX) -c $(CFLAGS) $(CXXFLAGS) $< -o $@
 
 all: release
 
