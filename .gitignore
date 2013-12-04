@@ -4,3 +4,4 @@
 .ruby-gemset
 .ruby-version
 *.xlsx
+*coverage*

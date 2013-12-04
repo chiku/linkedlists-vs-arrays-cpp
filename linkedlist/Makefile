@@ -30,12 +30,12 @@ coverage: LDFLAGS += --coverage
 coverage: test generate.coverage.report
 
 generate.coverage.report:
-	${LCOV} --capture --directory bin --output-file coverage.info
-	${LCOV} --extract coverage.info "linkedlist.cpp" -o coverage.filtered.info
+	${LCOV} --capture --directory ${PWD}/obj --base-directory ${PWD} --output-file coverage.info
+	${LCOV} --extract coverage.info "${PWD}/linkedlist.cpp" -o coverage.filtered.info
 	${GENHTML} coverage.filtered.info --output-directory coverage
 
 clean:
-	rm -rf obj/*.o bin/linkedlist* *.info *.gcda *.gcno coverage*
+	rm -rf obj/*.o bin/linkedlist* */*.info */*.gcda */*.gcno coverage*
 
 bin/linkedlist: obj/linkedlist.o obj/main.o
 	${CXX} -o bin/linkedlist obj/linkedlist.o obj/main.o ${LDFLAGS}
