@@ -1,4 +1,4 @@
-#include <iostream>
+#include <sstream>
 #include <cstddef>
 
 #include "linkedlist.h"
@@ -57,14 +57,17 @@ Linkedlist::insert(int value, int position)
 	p->next = new Node(value, p->next);
 }
 
-void
+std::string
 Linkedlist::dump() const
 {
-	std::cout << std::endl << "dump: [";
+	std::ostringstream s;
+	s << "[ ";
 
 	for (Node *p = head; p != NULL; p = p->next) {
-		std::cout << '<' << p->value << '>' << " -> ";
+		s << '<' << p->value << '>' << " -> ";
 	}
 
-	std::cout << "NULL" << ']' << std::endl;
+	s << "NULL ]";
+
+	return s.str();
 }

@@ -1,4 +1,4 @@
-#include <iostream>
+#include <sstream>
 #include <cstddef>
 
 #include "arraylist.h"
@@ -43,14 +43,18 @@ Arraylist::insert(int value, int position)
 	values[position] = value;
 }
 
-void
+std::string
 Arraylist::dump() const
 {
-	std::cout << std::endl << "dump: [";
+	std::ostringstream s;
+
+	s << "[ ";
 
 	for (int i = 0; i < capacity; i++) {
-		std::cout << '<' << values[i] << "> -> ";
+		s << "<" << values[i] << "> -> ";
 	}
 
-	std::cout << "NULL" << ']' << std::endl;
+	s << "NULL ]";
+
+	return s.str();
 }

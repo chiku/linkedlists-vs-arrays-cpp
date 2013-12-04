@@ -14,7 +14,7 @@ public:
 	bool isEmpty() const;
 	int operator[](int position);
 	void insert(int value, int position);
-	void dump() const;
+	std::string dump() const;
 };
 
 #endif

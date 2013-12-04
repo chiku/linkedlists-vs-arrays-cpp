@@ -73,4 +73,14 @@ BOOST_AUTO_TEST_CASE(array_list_has_items_when_third_item_is_inserted_in_middle)
 	BOOST_CHECK_EQUAL(20, list[2]);
 }
 
+BOOST_AUTO_TEST_CASE(array_list_has_a_string_representation)
+{
+	Arraylist list(3);
+	list.insert(10, 0);
+	list.insert(20, 1);
+	list.insert(30, 1);
+
+	BOOST_CHECK_EQUAL(std::string("[ <10> -> <30> -> <20> -> NULL ]"), list.dump());
+}
+
 BOOST_AUTO_TEST_SUITE_END()
