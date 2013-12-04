@@ -3,12 +3,6 @@
 
 #include "linkedlist.h"
 
-Node::Node()
-{
-	value = 0;
-	next = NULL;
-}
-
 Node::Node(int value_, Node *next_)
 {
 	value = value_;
