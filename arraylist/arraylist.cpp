@@ -37,7 +37,7 @@ Arraylist::insert(int value, int position)
 	tail++;
 	position = position > tail ? tail : position;
 
-	for (int i = capacity - 1; i > position - 1; i--) {
+	for (int i = capacity - 2; i > position - 1; i--) {
 		values[i + 1] = values[i];
 	}
 
