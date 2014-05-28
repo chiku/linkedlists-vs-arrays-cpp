@@ -5,12 +5,12 @@ sizes = []
 arrays = []
 linked_lists = []
 
-CSV.foreach("outputs/arraylist.csv") do |(sample_size, time)|
+CSV.foreach("output/arraylist.csv") do |(sample_size, time)|
   sizes << sample_size.to_f
   arrays <<  time.to_f
 end
 
-CSV.foreach("outputs/linkedlist.csv") do |(sample_size, time)|
+CSV.foreach("output/linkedlist.csv") do |(sample_size, time)|
   linked_lists << time.to_f
 end
 

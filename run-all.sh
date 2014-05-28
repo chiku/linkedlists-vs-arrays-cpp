@@ -1,15 +1,15 @@
 #!/bin/sh
 
-mkdir -p outputs
+mkdir -p output
 
 cd arraylist
 make clean compile test
-./bin/arraylist | tee ../outputs/arraylist.csv
+./bin/arraylist | tee ../output/arraylist.csv
 cd ..
 
 cd linkedlist
 make clean compile test
-./bin/linkedlist | tee ../outputs/linkedlist.csv
+./bin/linkedlist | tee ../output/linkedlist.csv
 cd ..
 
 ruby generate_chart_report.rb

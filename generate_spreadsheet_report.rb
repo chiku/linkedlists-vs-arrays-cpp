@@ -3,11 +3,11 @@ require "axlsx"
 
 sample_to_times = {}
 
-CSV.foreach("outputs/arraylist.csv") do |(sample_size, time)|
+CSV.foreach("output/arraylist.csv") do |(sample_size, time)|
   sample_to_times[sample_size.to_f] = [time.to_f]
 end
 
-CSV.foreach("outputs/linkedlist.csv") do |(sample_size, time)|
+CSV.foreach("output/linkedlist.csv") do |(sample_size, time)|
   sample_to_times[sample_size.to_f] << time.to_f
 end
 
