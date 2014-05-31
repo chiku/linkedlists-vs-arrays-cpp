@@ -47,4 +47,4 @@ obj/linkedlist.o: linkedlist.cpp linkedlist.h
 obj/linkedlist-test.o: linkedlist-test.cpp linkedlist.h
 obj/main.o: main.cpp linkedlist.h
 
-.PHONY: clean generate.coverage.report
+.PHONY: all compile test release coverage generate.coverage.report clean

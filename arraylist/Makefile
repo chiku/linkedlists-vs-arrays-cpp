@@ -47,4 +47,4 @@ obj/arraylist.o: arraylist.cpp arraylist.h
 obj/arraylist-test.o: arraylist-test.cpp arraylist.h
 obj/main.o: main.cpp arraylist.h
 
-.PHONY: clean generate.coverage.report
+.PHONY: all compile test release coverage generate.coverage.report clean
