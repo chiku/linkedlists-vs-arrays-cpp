@@ -39,6 +39,8 @@ Result
 
 You can view the results by opening *public/index.html* in a web-browser. You can also open *result.xlsx* in a spreadsheet application.
 
+A precomputed result is available at http://chiku.github.io/linkedlists-vs-arrays/
+
 License
 -------
 Please refer to LICENSE
