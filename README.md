@@ -43,4 +43,4 @@ A precomputed result is available at http://chiku.github.io/linkedlists-vs-array
 
 License
 -------
-Please refer to LICENSE
+This tool is released under the MIT license. Please refer to LICENSE for more details.
