@@ -5,10 +5,10 @@ GEM
       htmlentities (~> 4.3.1)
       nokogiri (>= 1.4.1)
       rubyzip (~> 1.0.0)
-    htmlentities (4.3.3)
-    mini_portile (0.6.2)
-    nokogiri (1.6.6.2)
-      mini_portile (~> 0.6.0)
+    htmlentities (4.3.4)
+    mini_portile2 (2.0.0)
+    nokogiri (1.6.7.1)
+      mini_portile2 (~> 2.0.0.rc2)
     rubyzip (1.0.0)
 
 PLATFORMS
@@ -16,3 +16,6 @@ PLATFORMS
 
 DEPENDENCIES
   axlsx
+
+BUNDLED WITH
+   1.11.2
