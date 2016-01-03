@@ -1,3 +1,10 @@
+// linkedlist/main.cpp
+//
+// Author::    Chirantan Mitra
+// Copyright:: Copyright (c) 2013-2016. All rights reserved
+// License::   MIT
+
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>

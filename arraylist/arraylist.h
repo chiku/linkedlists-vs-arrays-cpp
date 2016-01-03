@@ -1,3 +1,9 @@
+// arraylist/arraylist.h
+//
+// Author::    Chirantan Mitra
+// Copyright:: Copyright (c) 2013-2016. All rights reserved
+// License::   MIT
+
 #ifndef __LINKED_LIST_H__
 #define __LINKED_LIST_H__
 
