@@ -4,4 +4,5 @@ branches:
     - cpp
     - golang
 script:
-  - ./.travis.sh
+  - ./prereqs.sh
+  - ./build.sh
