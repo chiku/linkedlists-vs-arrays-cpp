@@ -19,7 +19,7 @@ How to run the benchmarks
 
 * Clone the repository
 ```
-git clone https://github.com/chiku/linkedlists-vs-arrays.git
+git clone https://github.com/chiku/linkedlists-vs-arrays.git -b cpp
 ```
 * Nagivate to the source code
 ```

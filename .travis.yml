@@ -1,10 +1,9 @@
 language: cpp
+branches:
+  only:
+    - cpp
+    - golang
 compiler:
   - gcc
 script:
-  - sudo apt-get update
-  - sudo apt-get install libboost-test-dev lcov
-  - cd linkedlist
-  - make clean coverage
-  - cd ../arraylist
-  - make clean coverage
+  - ./travis.sh

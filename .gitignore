@@ -5,3 +5,6 @@
 .ruby-version
 *.xlsx
 *coverage*
+Godeps/_workspace/
+Godeps/Readme
+_vendor/
