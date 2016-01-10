@@ -3,7 +3,5 @@ branches:
   only:
     - cpp
     - golang
-compiler:
-  - gcc
 script:
-  - ./travis.sh
+  - ./.travis.sh
