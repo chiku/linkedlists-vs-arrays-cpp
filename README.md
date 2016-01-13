@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/chiku/linkedlists-vs-arrays.svg?branch=cpp)](https://travis-ci.org/chiku/linkedlists-vs-arrays)
+[![Build Status](https://travis-ci.org/chiku/linkedlists-vs-arrays.svg?branch=golang)](https://travis-ci.org/chiku/linkedlists-vs-arrays)
+
 Purpose
 =======
 
