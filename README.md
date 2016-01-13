@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/chiku/linkedlists-vs-arrays.svg?branch=cpp)](https://travis-ci.org/chiku/linkedlists-vs-arrays)
-[![Build Status](https://travis-ci.org/chiku/linkedlists-vs-arrays.svg?branch=golang)](https://travis-ci.org/chiku/linkedlists-vs-arrays)
 
 Purpose
 =======
@@ -14,35 +13,36 @@ Prerequisites
 * A C++ compiler
 * Boost test library
 
-You can boost test library on Ubuntu using ```sudo apt-get install libboost-test-dev```
-
-
 How to run the benchmarks
 -------------------------
 
 * Clone the repository
 ```
-git clone https://github.com/chiku/linkedlists-vs-arrays.git -b cpp
+cd $GOROOT
+mkdir -p chiku
+git clone https://github.com/chiku/linkedlists-vs-arrays.git -b golang
 ```
 * Nagivate to the source code
 ```
 cd linkedlists-vs-arrays
 ```
-* Run bundle
+* Fetch the prerequisites
 ```
-bundle
+./prereqs.sh
 ```
-* Run run-all.sh
+* Build the app
 ```
-./run-all.sh
+./build.sh
+```
+* Run the app
+```
+./run.sh
 ```
 
 Result
 ------
 
-You can view the results by opening *public/index.html* in a web-browser. You can also open *result.xlsx* in a [spreadsheet application](https://www.libreoffice.org/download/).
-
-Precomputed results are available at http://chiku.github.io/linkedlists-vs-arrays/
+Precomputed results are available at http://htmlpreview.github.io/?https://github.com/chiku/linkedlists-vs-arrays/blob/cpp/public/index.html
 
 License
 -------
