@@ -4,100 +4,87 @@
 // Copyright:: Copyright (c) 2013-2020. All rights reserved
 // License::   MIT
 
-#define BOOST_TEST_DYN_LINK
-#define BOOST_TEST_MODULE Arraylist
 
-#include <boost/test/unit_test.hpp>
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
 
 #include "arraylist.h"
 
-class ArraylistTestFixture
+TEST_CASE("Array list is empty on creation", "[arraylist]")
 {
-public:
-	ArraylistTestFixture() {}
-	~ArraylistTestFixture() {}
-};
+	Arraylist list(3);
+	REQUIRE(list.isEmpty());
+}
 
-BOOST_FIXTURE_TEST_SUITE(ArraylistTest, ArraylistTestFixture)
-
-BOOST_AUTO_TEST_CASE(array_list_is_empty_on_creation)
+TEST_CASE("Array list has report items as zero before insertion", "[arraylist]")
 {
 	Arraylist list(3);
 
-	BOOST_CHECK_EQUAL(true, list.isEmpty());
+	REQUIRE(list[0] == 0);
+	REQUIRE(list[1] == 0);
 }
 
-BOOST_AUTO_TEST_CASE(array_list_has_reports_items_as_zero_before_insertion)
-{
-	Arraylist list(3);
-
-	BOOST_CHECK_EQUAL(0, list[0]);
-	BOOST_CHECK_EQUAL(0, list[1]);
-}
-
-BOOST_AUTO_TEST_CASE(array_list_has_items_when_first_item_is_inserted)
+TEST_CASE("Array list has items when first item is inserted", "[arraylist]")
 {
 	Arraylist list(3);
 	list.insert(10, 0);
 
-	BOOST_CHECK_EQUAL(false, list.isEmpty());
-	BOOST_CHECK_EQUAL(10, list[0]);
+	REQUIRE(!list.isEmpty());
+	REQUIRE(list[0] == 10);
 }
 
-BOOST_AUTO_TEST_CASE(array_list_has_items_when_second_item_is_inserted_at_end)
+TEST_CASE("Array list has items when second item is inserted at end", "[arraylist]")
 {
 	Arraylist list(3);
 	list.insert(10, 0);
 	list.insert(20, 1);
 
-	BOOST_CHECK_EQUAL(false, list.isEmpty());
-	BOOST_CHECK_EQUAL(10, list[0]);
-	BOOST_CHECK_EQUAL(20, list[1]);
+	REQUIRE(!list.isEmpty());
+	REQUIRE(list[0] == 10);
+	REQUIRE(list[1] == 20);
 }
 
-BOOST_AUTO_TEST_CASE(array_list_has_items_when_item_is_inserted_beyond_end)
+TEST_CASE("Array list has items when item is inserted beyond end", "[arraylist]")
 {
 	Arraylist list(3);
 	list.insert(10, 0);
 	list.insert(20, 2);
 
-	BOOST_CHECK_EQUAL(false, list.isEmpty());
-	BOOST_CHECK_EQUAL(10, list[0]);
-	BOOST_CHECK_EQUAL(20, list[1]);
+	REQUIRE(!list.isEmpty());
+	REQUIRE(list[0] == 10);
+	REQUIRE(list[1] == 20);
 }
 
-BOOST_AUTO_TEST_CASE(array_list_has_items_when_second_item_is_inserted_at_start)
+TEST_CASE("Array list has items when second item is inserted at start", "[arraylist]")
 {
 	Arraylist list(3);
 	list.insert(10, 0);
 	list.insert(20, 0);
 
-	BOOST_CHECK_EQUAL(false, list.isEmpty());
-	BOOST_CHECK_EQUAL(20, list[0]);
-	BOOST_CHECK_EQUAL(10, list[1]);
+	REQUIRE(!list.isEmpty());
+	REQUIRE(list[0] == 20);
+	REQUIRE(list[1] == 10);
 }
 
-BOOST_AUTO_TEST_CASE(array_list_has_items_when_third_item_is_inserted_in_middle)
+TEST_CASE("Array list has items when third item is inserted in middle", "[arraylist]")
 {
 	Arraylist list(3);
 	list.insert(10, 0);
 	list.insert(20, 1);
 	list.insert(30, 1);
 
-	BOOST_CHECK_EQUAL(false, list.isEmpty());
-	BOOST_CHECK_EQUAL(10, list[0]);
-	BOOST_CHECK_EQUAL(30, list[1]);
-	BOOST_CHECK_EQUAL(20, list[2]);
+	REQUIRE(!list.isEmpty());
+	REQUIRE(list[0] == 10);
+	REQUIRE(list[1] == 30);
+	REQUIRE(list[2] == 20);
 }
 
-BOOST_AUTO_TEST_CASE(array_list_has_a_string_representation)
+TEST_CASE("Array list has a string representation", "[arraylist]")
 {
 	Arraylist list(3);
 	list.insert(10, 0);
 	list.insert(20, 1);
 	list.insert(30, 1);
 
-	BOOST_CHECK_EQUAL(std::string("[ <10> -> <30> -> <20> -> NULL ]"), list.dump());
+	REQUIRE(list.dump() == std::string("[ <10> -> <30> -> <20> -> NULL ]"));
 }
-
-BOOST_AUTO_TEST_SUITE_END()

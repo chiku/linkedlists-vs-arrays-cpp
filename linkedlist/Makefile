@@ -7,9 +7,9 @@ GENHTML := genhtml
 
 CFLAGS += -O2 -Wall -Wextra
 CXXFLAGS += -O2 -Wall -Wextra
-LDFLAGS += -lboost_unit_test_framework
+LDFLAGS +=
 
-CXXFLAGS += -I.
+CXXFLAGS += -I. -I../vendor
 
 obj/%.o: %.cpp
 	$(CXX) -c $(CFLAGS) $(CXXFLAGS) $< -o $@
@@ -19,7 +19,7 @@ all: release
 compile: bin/linkedlist
 
 test: bin/linkedlist-test
-	./bin/linkedlist-test --show_progress
+	./bin/linkedlist-test
 
 release: compile test
 	${STRIP} bin/linkedlist

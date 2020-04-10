@@ -7,9 +7,9 @@ GENHTML := genhtml
 
 CFLAGS += -O2 -Wall -Wextra
 CXXFLAGS += -O2 -Wall -Wextra
-LDFLAGS += -lboost_unit_test_framework
+LDFLAGS +=
 
-CXXFLAGS += -I.
+CXXFLAGS += -I. -I../vendor
 
 obj/%.o: %.cpp
 	$(CXX) -c $(CFLAGS) $(CXXFLAGS) $< -o $@
@@ -19,7 +19,7 @@ all: release
 compile: bin/arraylist
 
 test: bin/arraylist-test
-	./bin/arraylist-test --show_progress
+	./bin/arraylist-test
 
 release: compile test
 	${STRIP} bin/arraylist
