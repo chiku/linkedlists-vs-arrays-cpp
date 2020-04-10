@@ -1,7 +1,7 @@
 // linkedlist/linkedlist-test.cpp
 //
 // Author::    Chirantan Mitra
-// Copyright:: Copyright (c) 2013-2016. All rights reserved
+// Copyright:: Copyright (c) 2013-2020. All rights reserved
 // License::   MIT
 
 #define BOOST_TEST_DYN_LINK

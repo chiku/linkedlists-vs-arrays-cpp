@@ -19,7 +19,7 @@ How to run the benchmarks
 ```
 cd $GOROOT
 mkdir -p chiku
-git clone https://github.com/chiku/linkedlists-vs-arrays.git -b golang
+git clone https://github.com/chiku/linkedlists-vs-arrays.git -b cpp
 ```
 * Nagivate to the source code
 ```
