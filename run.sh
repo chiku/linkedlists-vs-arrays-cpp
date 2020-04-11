@@ -5,8 +5,8 @@ IFS=$'\n\t'
 
 main() {
   mkdir -p output
-  cd arraylist && ./bin/arraylist | tee ../output/arraylist.csv && cd ..
-  cd linkedlist && ./bin/linkedlist | tee ../output/linkedlist.csv && cd ..
+  ./bin/arraylist | tee ./output/arraylist.csv
+  ./bin/linkedlist | tee ./output/linkedlist.csv
   ruby generate_chart_report.rb
 }
 

@@ -1,29 +1,20 @@
-// linkedlist/linkedlist.h
-//
 // Author::    Chirantan Mitra
 // Copyright:: Copyright (c) 2013-2020. All rights reserved
 // License::   MIT
 
+#ifndef __ARRAY_LIST_H__
+#define __ARRAY_LIST_H__
 
-#ifndef __LINKED_LIST_H__
-#define __LINKED_LIST_H__
-
-class Linkedlist
+class Arraylist
 {
-	struct Node
-	{
-		int value;
-		Node *next;
-
-		Node(int value_, Node *next_);
-	};
-
 private:
-	Node *head;
+	int capacity;
+	int tail;
+	int *values;
 
 public:
-	Linkedlist();
-	~Linkedlist();
+	Arraylist(int capacity);
+	~Arraylist();
 	bool isEmpty() const;
 	int operator[](int position);
 	void insert(int value, int position);

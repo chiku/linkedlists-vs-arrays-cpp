@@ -1,5 +1,3 @@
-// arraylist/main.cpp
-//
 // Author::    Chirantan Mitra
 // Copyright:: Copyright (c) 2013-2020. All rights reserved
 // License::   MIT
@@ -8,7 +6,7 @@
 #include <cstdlib>
 #include <ctime>
 
-#include "arraylist.h"
+#include "linkedlist.h"
 
 int main()
 {
@@ -20,7 +18,7 @@ int main()
 		sumOfTimes = 0.0;
 
 		for (int iterations = 0; iterations < REPEATS; iterations++) {
-			Arraylist list(MAX);
+			Linkedlist list;
 			std::clock_t start = std::clock();
 
 			for (int i = 0; i < insertions; i++) {

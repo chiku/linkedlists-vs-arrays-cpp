@@ -1,5 +1,3 @@
-// linkedlist/linkedlist-test.cpp
-//
 // Author::    Chirantan Mitra
 // Copyright:: Copyright (c) 2013-2020. All rights reserved
 // License::   MIT
@@ -8,35 +6,34 @@
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 
-#include "linkedlist.h"
+#include "arraylist.h"
 
-TEST_CASE("Linked list is empty on creation", "[linkedlist]")
+TEST_CASE("Array list is empty on creation", "[arraylist]")
 {
-	Linkedlist list;
-
+	Arraylist list(3);
 	REQUIRE(list.isEmpty());
 }
 
-TEST_CASE("Linked list has reports items as zero before insertion", "[linkedlist]")
+TEST_CASE("Array list has report items as zero before insertion", "[arraylist]")
 {
-	Linkedlist list;
+	Arraylist list(3);
 
 	REQUIRE(list[0] == 0);
 	REQUIRE(list[1] == 0);
 }
 
-TEST_CASE("Linked list has items when first item is inserted", "[linkedlist]")
+TEST_CASE("Array list has items when first item is inserted", "[arraylist]")
 {
-	Linkedlist list;
+	Arraylist list(3);
 	list.insert(10, 0);
 
 	REQUIRE(!list.isEmpty());
 	REQUIRE(list[0] == 10);
 }
 
-TEST_CASE("Linked list has items when second item is inserted at end", "[linkedlist]")
+TEST_CASE("Array list has items when second item is inserted at end", "[arraylist]")
 {
-	Linkedlist list;
+	Arraylist list(3);
 	list.insert(10, 0);
 	list.insert(20, 1);
 
@@ -45,9 +42,9 @@ TEST_CASE("Linked list has items when second item is inserted at end", "[linkedl
 	REQUIRE(list[1] == 20);
 }
 
-TEST_CASE("Linked list has items when item is inserted beyond end", "[linkedlist]")
+TEST_CASE("Array list has items when item is inserted beyond end", "[arraylist]")
 {
-	Linkedlist list;
+	Arraylist list(3);
 	list.insert(10, 0);
 	list.insert(20, 2);
 
@@ -56,9 +53,9 @@ TEST_CASE("Linked list has items when item is inserted beyond end", "[linkedlist
 	REQUIRE(list[1] == 20);
 }
 
-TEST_CASE("Linked list has items when second item is inserted at start", "[linkedlist]")
+TEST_CASE("Array list has items when second item is inserted at start", "[arraylist]")
 {
-	Linkedlist list;
+	Arraylist list(3);
 	list.insert(10, 0);
 	list.insert(20, 0);
 
@@ -67,9 +64,9 @@ TEST_CASE("Linked list has items when second item is inserted at start", "[linke
 	REQUIRE(list[1] == 10);
 }
 
-TEST_CASE("Linked list has items when third item is inserted in middle", "[linkedlist]")
+TEST_CASE("Array list has items when third item is inserted in middle", "[arraylist]")
 {
-	Linkedlist list;
+	Arraylist list(3);
 	list.insert(10, 0);
 	list.insert(20, 1);
 	list.insert(30, 1);
@@ -80,9 +77,9 @@ TEST_CASE("Linked list has items when third item is inserted in middle", "[linke
 	REQUIRE(list[2] == 20);
 }
 
-TEST_CASE("array list has a string representation", "[linkedlist]")
+TEST_CASE("Array list has a string representation", "[arraylist]")
 {
-	Linkedlist list;
+	Arraylist list(3);
 	list.insert(10, 0);
 	list.insert(20, 1);
 	list.insert(30, 1);
