@@ -3,8 +3,8 @@ STRIP := strip
 LCOV := lcov
 GENHTML := genhtml
 
-CXXFLAGS += -O2 -Wall -Wextra -I./headers -I./vendor
-LDFLAGS +=
+CXXFLAGS += -std=c++11 -O2 -Wall -Wextra -I./headers -I./vendor
+LDFLAGS += -std=c++11
 
 ARRAYLIST_BIN := bin/arraylist
 LINKEDLIST_BIN := bin/linkedlist
