@@ -18,7 +18,8 @@ Linkedlist::Linkedlist()
 	head = NULL;
 }
 
-Linkedlist::~Linkedlist() {
+Linkedlist::~Linkedlist()
+{
 	Linkedlist::Node *p;
 
 	while (head != NULL) {

@@ -10,7 +10,7 @@ new Highcharts.Chart({
         text: '<a href="https://github.com/chiku/linkedlists-vs-arrays">https://github.com/chiku/linkedlists-vs-arrays</a>'
     },
     xAxis: {
-        categories: [<%= container_sizes %>],
+        categories: [{{container_sizes}}],
         title: {
             text: 'Size'
         },
@@ -35,11 +35,11 @@ new Highcharts.Chart({
     },
     series: [{
         name: 'Array',
-        data: [ <%= array_durations %> ],
+        data: [{{array_list_durations}}],
         animation: false
     }, {
         name: 'Linked-list',
-        data: [ <%= linked_list_durations %> ],
+        data: [{{linked_list_durations}}],
         animation: false
     }]
 });

@@ -8,6 +8,7 @@ LDFLAGS +=
 
 ARRAYLIST_BIN := bin/arraylist
 LINKEDLIST_BIN := bin/linkedlist
+GENERATE_REPORT_BIN := bin/generate-report
 ARRAYLIST_TEST_BIN := bin/arraylist-test
 LINKEDLIST_TEST_BIN := bin/linkedlist-test
 
@@ -17,7 +18,7 @@ LINKEDLIST_TEST_BIN := bin/linkedlist-test
 
 all: release
 
-compile: $(ARRAYLIST_BIN) $(LINKEDLIST_BIN)
+compile: $(ARRAYLIST_BIN) $(LINKEDLIST_BIN) $(GENERATE_REPORT_BIN)
 
 test: $(ARRAYLIST_TEST_BIN) $(LINKEDLIST_TEST_BIN)
 	./$(ARRAYLIST_TEST_BIN)
@@ -45,6 +46,10 @@ $(ARRAYLIST_TEST_BIN): obj/arraylist/arraylist.o obj/arraylist/arraylist-test.o
 	mkdir -p $(dir $@)
 	${CXX} ${CXXFLAGS} -o $@ $? ${LDFLAGS}
 
+$(GENERATE_REPORT_BIN): obj/generate-report/main.o
+	mkdir -p $(dir $@)
+	${CXX} ${CXXFLAGS} -o $@ $? ${LDFLAGS}
+
 $(LINKEDLIST_BIN): obj/linkedlist/linkedlist.o obj/linkedlist/main.o
 	mkdir -p $(dir $@)
 	${CXX} ${CXXFLAGS} -o $@ $? ${LDFLAGS}
@@ -54,11 +59,13 @@ $(LINKEDLIST_TEST_BIN): obj/linkedlist/linkedlist.o obj/linkedlist/linkedlist-te
 	${CXX} ${CXXFLAGS} -o $@ $? ${LDFLAGS}
 
 obj/arraylist/arraylist.o: pkg/arraylist/arraylist.cpp headers/arraylist.h
-obj/arraylist/arraylist-test.o: tests/arraylist/arraylist-test.cpp headers/arraylist.h
+obj/arraylist/arraylist-test.o: tests/arraylist/arraylist-test.cpp vendor/catch.hpp headers/arraylist.h
 obj/arraylist/main.o: pkg/arraylist/main.cpp headers/arraylist.h
 
 obj/linkedlist/linkedlist.o: pkg/linkedlist/linkedlist.cpp headers/linkedlist.h
-obj/linkedlist/linkedlist-test.o: tests/linkedlist/linkedlist-test.cpp headers/linkedlist.h
+obj/linkedlist/linkedlist-test.o: tests/linkedlist/linkedlist-test.cpp vendor/catch.hpp headers/linkedlist.h
 obj/linkedlist/main.o: pkg/linkedlist/main.cpp headers/linkedlist.h
+
+obj/generate-report/main.o: pkg/generate-report/main.cpp
 
 .PHONY: all compile test release coverage clean

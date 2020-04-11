@@ -7,10 +7,9 @@ Prove that insertions into arrays are faster than insertions into linked-lists.
 
 Prerequisites
 -------------
-* Ruby
-* make
 * A C++ compiler
-* Boost test library
+* make
+* lcov
 
 How to run the benchmarks
 -------------------------
@@ -46,3 +45,5 @@ Precomputed results are available at http://htmlpreview.github.io/?https://githu
 License
 -------
 This software is released under the MIT license. Please refer to LICENSE for more details.
+
+[catch2](https://github.com/catchorg/Catch2) is released under the Boost Software License.
