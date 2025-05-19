@@ -16,31 +16,44 @@ How to run the benchmarks
 
 * Clone the repository
 ```
-cd $GOROOT
-mkdir -p chiku
-git clone https://github.com/chiku/linkedlists-vs-arrays.git -b cpp
+git clone https://github.com/chiku/linkedlists-vs-arrays-cpp.git
 ```
+
 * Nagivate to the source code
 ```
-cd linkedlists-vs-arrays
+cd linkedlists-vs-arrays-cpp
 ```
-* Fetch the prerequisites
+
+* Install `lcov`. Run the following for Ubuntu, Debian etc.
 ```
-./prereqs.sh
+sudo apt install lcov
 ```
+
+* Run test [optional]
+```
+make clean coverage
+```
+
 * Build the app
 ```
-./build.sh
+make clean compile
 ```
+
 * Run the app
 ```
 ./run.sh
 ```
 
+* Open ./public/index.html in a web browser
+
 Result
 ------
 
-Precomputed results are available at http://htmlpreview.github.io/?https://github.com/chiku/linkedlists-vs-arrays/blob/cpp/public/index.html
+Precomputed results are available at http://htmlpreview.github.io/?https://github.com/chiku/linkedlists-vs-arrays-cpp/blob/cpp/public/index.html
+
+
+Check equivalent repository for golang here - https://github.com/chiku/linkedlists-vs-arrays-golang
+
 
 License
 -------
