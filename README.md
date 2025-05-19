@@ -49,7 +49,7 @@ make clean compile
 Result
 ------
 
-Precomputed results are available at http://htmlpreview.github.io/?https://github.com/chiku/linkedlists-vs-arrays-cpp/blob/cpp/public/index.html
+Precomputed results are available at http://htmlpreview.github.io/?https://github.com/chiku/linkedlists-vs-arrays-cpp/blob/main/public/index.html
 
 
 Check equivalent repository for golang here - https://github.com/chiku/linkedlists-vs-arrays-golang
