@@ -4,17 +4,17 @@
 
 
 #define CATCH_CONFIG_MAIN
-#include "catch.hpp"
+#include "doctest.h"
 
 #include "arraylist.h"
 
-TEST_CASE("Array list is empty on creation", "[arraylist]")
+TEST_CASE("Array list is empty on creation")
 {
 	Arraylist list(3);
 	REQUIRE(list.isEmpty());
 }
 
-TEST_CASE("Array list has report items as zero before insertion", "[arraylist]")
+TEST_CASE("Array list has report items as zero before insertion")
 {
 	Arraylist list(3);
 
@@ -22,7 +22,7 @@ TEST_CASE("Array list has report items as zero before insertion", "[arraylist]")
 	REQUIRE(list[1] == 0);
 }
 
-TEST_CASE("Array list has items when first item is inserted", "[arraylist]")
+TEST_CASE("Array list has items when first item is inserted")
 {
 	Arraylist list(3);
 	list.insert(10, 0);
@@ -31,7 +31,7 @@ TEST_CASE("Array list has items when first item is inserted", "[arraylist]")
 	REQUIRE(list[0] == 10);
 }
 
-TEST_CASE("Array list has items when second item is inserted at end", "[arraylist]")
+TEST_CASE("Array list has items when second item is inserted at end")
 {
 	Arraylist list(3);
 	list.insert(10, 0);
@@ -42,7 +42,7 @@ TEST_CASE("Array list has items when second item is inserted at end", "[arraylis
 	REQUIRE(list[1] == 20);
 }
 
-TEST_CASE("Array list has items when item is inserted beyond end", "[arraylist]")
+TEST_CASE("Array list has items when item is inserted beyond end")
 {
 	Arraylist list(3);
 	list.insert(10, 0);
@@ -53,7 +53,7 @@ TEST_CASE("Array list has items when item is inserted beyond end", "[arraylist]"
 	REQUIRE(list[1] == 20);
 }
 
-TEST_CASE("Array list has items when second item is inserted at start", "[arraylist]")
+TEST_CASE("Array list has items when second item is inserted at start")
 {
 	Arraylist list(3);
 	list.insert(10, 0);
@@ -64,7 +64,7 @@ TEST_CASE("Array list has items when second item is inserted at start", "[arrayl
 	REQUIRE(list[1] == 10);
 }
 
-TEST_CASE("Array list has items when third item is inserted in middle", "[arraylist]")
+TEST_CASE("Array list has items when third item is inserted in middle")
 {
 	Arraylist list(3);
 	list.insert(10, 0);
@@ -77,7 +77,7 @@ TEST_CASE("Array list has items when third item is inserted in middle", "[arrayl
 	REQUIRE(list[2] == 20);
 }
 
-TEST_CASE("Array list has a string representation", "[arraylist]")
+TEST_CASE("Array list has a string representation")
 {
 	Arraylist list(3);
 	list.insert(10, 0);

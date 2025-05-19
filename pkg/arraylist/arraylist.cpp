@@ -3,6 +3,7 @@
 // License::   MIT
 
 #include <sstream>
+#include <string>
 #include <cstddef>
 
 #include "arraylist.h"

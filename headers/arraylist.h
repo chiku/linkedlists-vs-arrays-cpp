@@ -5,6 +5,8 @@
 #ifndef __ARRAY_LIST_H__
 #define __ARRAY_LIST_H__
 
+#include <string>
+
 class Arraylist
 {
 private:

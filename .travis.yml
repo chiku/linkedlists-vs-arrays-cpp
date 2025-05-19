@@ -1,8 +1,0 @@
-language: cpp
-branches:
-  only:
-    - cpp
-    - golang
-script:
-  - ./prereqs.sh
-  - ./build.sh

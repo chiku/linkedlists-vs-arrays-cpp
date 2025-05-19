@@ -59,4 +59,4 @@ License
 -------
 This software is released under the MIT license. Please refer to LICENSE for more details.
 
-[catch2](https://github.com/catchorg/Catch2) is released under the Boost Software License.
+[doctest](https://github.com/doctest/doctest) is released under the MIT license.
