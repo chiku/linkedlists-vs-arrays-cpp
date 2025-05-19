@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/chiku/linkedlists-vs-arrays.svg?branch=cpp)](https://travis-ci.org/chiku/linkedlists-vs-arrays)
+[![Build Status](https://github.com/chiku/linkedlists-vs-arrays-cpp/actions/workflows/build.yml/badge.svg)](https://github.com/chiku/linkedlists-vs-arrays-cpp/actions/workflows/build.yml)
 
 Purpose
 =======
